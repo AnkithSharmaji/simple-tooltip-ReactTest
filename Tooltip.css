@@ -1,0 +1,78 @@
+ /*
+Sets the container element as a positioned element
+so that we can use absolute positioning for the tooltip
+*/
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  }
+  
+  /*
+  Hides the tooltip by default
+  and sets the width, background color, font color,
+  text alignment, padding, and border radius
+  for the tooltip box
+  */
+  .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  }
+  
+  /*
+  When the container element is hovered,
+  the visibility of the tooltip box is set to visible
+  and the opacity is set to 1 for a fade-in effect
+  */
+  .tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  }
+  
+  /*
+  Sets the positioning for the tooltip box
+  when it's placed above the container element
+  */
+  .tooltip-top {
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  }
+  
+  /*
+  Sets the positioning for the tooltip box
+  when it's placed below the container element
+  */
+  .tooltip-bottom {
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  }
+  
+  /*
+  Sets the positioning for the tooltip box
+  when it's placed to the left of the container element
+  */
+  .tooltip-left {
+  top: 50%;
+  right: 125%;
+  margin-top: -17px;
+  }
+  
+  /*
+  Sets the positioning for the tooltip box
+  when it's placed to the right of the container element
+  */
+  .tooltip-right {
+  top: 50%;
+  left: 125%;
+  margin-top: -17px;
+  }
